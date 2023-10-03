@@ -18,6 +18,9 @@ function closeSideMenu() {
     navListItems.style.display = "none"
 }
 
+
+// for changing navigation theme o scroll
+
 const navBar = document.querySelector('nav');
 
 window.addEventListener('scroll', () => {
