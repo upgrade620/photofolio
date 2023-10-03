@@ -10,6 +10,12 @@
     --color-white: #e5e5e5;
 }
 
+/* change navbar color on scroll */
+
+.change__navbar__theme__onscroll {
+    --light-blue: #187593;
+}
+
 /* general styles */
 
 * {
@@ -388,16 +394,23 @@ main footer {
     }
 
     nav .nav__items .nav__list__items {
-        display: flex;
+        display: none;
         flex-direction: column;
         height: fit-content;
         width: 10rem;
         position: fixed;
         top: 4.2rem;
-        right: 0;
+        right: -100%;
         z-index: 100;
         align-items: center;
         background: var(--light-blue);
+        animation: showSideMenu 400ms ease forwards;
+    }
+
+    @keyframes showSideMenu {
+        to {
+            right: 2%;
+        }
     }
 
     nav .nav__items .nav__list__items li {
