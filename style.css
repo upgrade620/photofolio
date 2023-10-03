@@ -129,7 +129,7 @@ nav .nav__items .search__bar button {
     transition: all 400ms ease;
 }
 
-nav .nav__items .search__bar button:hover {
+nav .nav__items .search__bar button:hover, main .container .categories .category .category__action__btn button:hover {
     opacity: 0.7;
 }
 
@@ -166,7 +166,7 @@ nav .nav__items .nav__list__items .active::after {
 }
 
 nav .nav__items .side__menu__btn {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 }
@@ -183,12 +183,6 @@ nav .nav__items .side__menu__btn button span {
 
 /* Then of navigation bar */
 
-/* this is for just making our work easier */
-
-img {
-    width: 40px;
-    height: 30px;
-}
 
 main {
     position: absolute;
@@ -227,7 +221,6 @@ main article .top__pick .top__pick__image {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: red;
     border-radius: 3rem 0 3rem 0;
     border: 10px solid var(--color-white);
 }
@@ -245,3 +238,109 @@ img {
 img:hover {
     filter: saturate(0);
 }
+
+main .container {
+    width: 100%;
+    margin: 1rem 0;
+    display: grid;
+    place-items: center;
+    border-bottom: 1px solid var(--color-white);
+}
+
+main .container .categories {
+    width: 80%;
+    height: auto;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    row-gap: 20px;
+}
+
+
+main .container .categories .category {
+    width: 100%;
+    padding: 5px;
+    display: grid;
+    grid-template-rows: 40px auto 60px 40px;
+    row-gap: 6px;
+    border-radius: 10px;
+    border: 2px solid var(--color-white);
+}
+
+main .container .categories .category #group_category__btn {
+    background: var(--dark-blue);
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 6px 0;
+    height: 100%;
+    margin-top: 2px;
+}
+
+main .container .categories .category .category__top__image {
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+main .container .categories .category .category__top__image img {
+    width: 100%;
+    height: 100%;
+}
+
+main .container .categories .category .sub__category__images {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 5px;
+}
+
+main .container .categories .category .sub__category__images .sub__category__image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+main .container .categories .category .sub__category__images .sub__category__image img {
+    width: 100%;
+    height: 100%;
+}
+
+main .container .categories .category .category__action__btn {
+    width: 100%;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+}
+
+main .container .categories .category .category__action__btn button {
+    background: var(--dark-blue);
+    border-radius: 3px;
+    font-weight: 400;
+    padding: 0 5px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 400ms ease;
+}
+
+main .container .categories .category .category__action__btn button:first-child, main .container .categories .category .category__action__btn button span {
+    color: rgb(190, 111, 111);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+main .container .categories .category .category__action__btn button span {
+    font-size: 1.2rem;
+}
+
+
+/* the end of main content */
